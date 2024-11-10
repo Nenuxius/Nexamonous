@@ -1,19 +1,19 @@
 
 function showGame(game) {
-    document.getElementById('game-container-2048').style.display = 'none';
-    document.getElementById('game-container-ludo').style.display = 'none';
-    
-    if (game === '2048') {
-        document.getElementById('game-container-2048').style.display = 'block';
-    } else if (game === 'ludo') {
-        document.getElementById('game-container-ludo').style.display = 'block';
-    }
+    document.getElementById('game-container-2048').style.display = game === '2048' ? 'block' : 'none';
+    document.getElementById('game-container-ludo').style.display = game === 'ludo' ? 'block' : 'none';
 }
 
-function openSignup() {
-    alert('Sign Up - Feature Under Development');
+function startGame() {
+    let goal = document.getElementById('goal-select').value;
+    document.getElementById('message').innerText = 'Reach ' + goal + ' to win!';
 }
 
-function openLogin() {
-    alert('Login - Feature Under Development');
+function move(direction) {
+    console.log('Moving:', direction);
+}
+
+function rollDice() {
+    const result = Math.floor(Math.random() * 6) + 1;
+    document.getElementById('dice-result').innerText = 'Rolled: ' + result;
 }

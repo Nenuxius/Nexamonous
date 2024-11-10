@@ -4,27 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staro Games - Game Selection</title>
+    <title>Staro Games - Choose Your Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Welcome to Staro</h1>
-        <p class="subtitle">Game Selection</p>
-    </header>
-
-    <div id="game-selector" class="game-selection">
-        <button class="game-button" onclick="showGame('2048')">2048 Game</button>
-        <button class="game-button" onclick="showGame('ludo')">Ludo Game</button>
-    </div>
-
-    <div class="auth-section">
-        <button class="auth-button" onclick="openSignup()">Sign Up</button>
-        <button class="auth-button" onclick="openLogin()">Login</button>
+    <div id="game-selector">
+        <button onclick="showGame('2048')">2048 Game</button>
+        <button onclick="showGame('ludo')">Ludo</button>
     </div>
 
     <!-- 2048 Game Container -->
-    <div id="game-container-2048" class="game-container" style="display: none;">
+    <div id="game-container-2048" style="display: none;">
         <h2>2048 Game</h2>
         <div>
             <label for="goal-select">Choose Goal:</label>
@@ -48,7 +38,7 @@
     </div>
 
     <!-- Ludo Game Container -->
-    <div id="game-container-ludo" class="game-container" style="display: none;">
+    <div id="game-container-ludo" style="display: none;">
         <h2>Ludo Game</h2>
         <div id="ludo-board">
             <!-- Ludo board layout -->
