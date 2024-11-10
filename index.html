@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staro Games - Game Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Staro</h1>
+        <p class="subtitle">Game Selection</p>
+    </header>
+
+    <div id="game-selector" class="game-selection">
+        <button class="game-button" onclick="showGame('2048')">2048 Game</button>
+        <button class="game-button" onclick="showGame('ludo')">Ludo Game</button>
+    </div>
+
+    <div class="auth-section">
+        <button class="auth-button" onclick="openSignup()">Sign Up</button>
+        <button class="auth-button" onclick="openLogin()">Login</button>
+    </div>
+
+    <!-- 2048 Game Container -->
+    <div id="game-container-2048" class="game-container" style="display: none;">
+        <h2>2048 Game</h2>
+        <div>
+            <label for="goal-select">Choose Goal:</label>
+            <select id="goal-select">
+                <option value="128">128</option>
+                <option value="256">256</option>
+                <option value="512">512</option>
+            </select>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+        <div id="direction-buttons">
+            <button onclick="move('up')" aria-label="Move Up">Up</button>
+            <button onclick="move('down')" aria-label="Move Down">Down</button>
+            <button onclick="move('left')" aria-label="Move Left">Left</button>
+            <button onclick="move('right')" aria-label="Move Right">Right</button>
+        </div>
+        <div id="board">
+            <!-- 4x4 grid will be generated here -->
+        </div>
+        <div id="message"></div>
+    </div>
+
+    <!-- Ludo Game Container -->
+    <div id="game-container-ludo" class="game-container" style="display: none;">
+        <h2>Ludo Game</h2>
+        <div id="ludo-board">
+            <!-- Ludo board layout -->
+        </div>
+        <button onclick="rollDice()">Roll Dice</button>
+        <div id="dice-result">Roll the dice to start!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
